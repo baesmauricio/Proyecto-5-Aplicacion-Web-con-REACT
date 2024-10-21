@@ -17,19 +17,18 @@ export const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon bg-white"></span>
           </button>
-
          
           <div className="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
             <ul className="navbar-nav text-center">
               <li className="nav-item">
-                <a className="nav-link text-white fs-3" aria-current="page" href="/">
+                <a className="nav-link text-white fs-1" aria-current="page" href="/">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-              <a className="nav-link active text-white fs-3" href="/rick">
+              <a className="nav-link active text-white fs-1" href="/rick">
                   Personajes
                 </a>
               </li>
@@ -38,22 +37,5 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-    
   );
 };
-
-
-// export const Navbar = () => {
-//   return (
-//     <>
-//       <nav className='container'>
-//         <h1> soy un Navbar </h1>
-//         <p className='paragraph'>personajes</p>
-//         <p className='text'>Busca tu personaje preferido </p>
-//         <p>chao</p>
-//       </nav>
-
-//     </>
-//   );
-// };
-

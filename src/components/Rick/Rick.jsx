@@ -7,7 +7,7 @@ import Card from '../Card/Card';
 export const Rick = () => {
   const [character, setCharacter] = useState([]);
 
-  const [searchTerm, setSearchTerm] = useState(''); // Estado para el valor de búsqueda
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const getCharacterDataRequest = async () => {
@@ -18,22 +18,19 @@ export const Rick = () => {
   }, []);
 
 
-  // Filtrar personajes según el término de búsqueda
   const filteredCharacters = character.filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()) // Filtro case-insensitive
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // if (hasError) {
-  //   throw new Error('Simulated error!');
+  //   throw new Error('Error simulado!');
   // }
 
   return (
     <>
       <div className='bg-dark text-white py-'>
-        <h1 className="text-center custom-heading mb-4">Rick and Morty</h1>
+        <h1 className="text-center display-3 fw-bold mb-4">Rick and Morty</h1>
 
-
-        {/* Formulario de búsqueda */}
         <div className="container my-4">
           <form className="d-flex justify-content-center">
             <input
@@ -41,14 +38,14 @@ export const Rick = () => {
               className="form-control w-50 fs-3"
               placeholder="Buscar personaje..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)} // Actualiza el estado al escribir
+              onChange={(e) => setSearchTerm(e.target.value)} 
             />
           </form>
         </div>
 
         <div className="container">
           <div className="row g-4">
-            {filteredCharacters.length > 0 ? (  // adicionado por search
+            {filteredCharacters.length > 0 ? ( 
               filteredCharacters.map((item) => (
                 <Card key={item.id} item={item}/>
               ))
